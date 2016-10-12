@@ -1,0 +1,343 @@
+#maste-vision-bg > .layer[data-id="3"] > .master-girl.active {
+    animation: girl_fit 2s;
+}
+
+@-webkit-keyframes girl_fit {
+    0% {
+        left: 19.5%;
+    }
+    20% {
+        left: 19.5%;
+    }
+    100% {
+        left: -5.5%;
+    }
+}
+
+@-moz-keyframes girl_fit {
+    0% {
+        left: 19.5%;
+    }
+    20% {
+        left: 19.5%;
+    }
+    100% {
+        left: -5.5%;
+    }
+}
+
+@-o-keyframes girl_fit {
+    0% {
+        left: 19.5%;
+    }
+    20% {
+        left: 19.5%;
+    }
+    100% {
+        left: -5.5%;
+    }
+}
+
+@keyframes girl_fit {
+    0% {
+        left: 19.5%;
+    }
+    20% {
+        left: 19.5%;
+    }
+    100% {
+        left: -5.5%;
+    }
+}
+
+#maste-vision-bg > .layer[data-id="3"] > .master-boy.active {
+    animation: boy_fit 2s;
+}
+
+@-webkit-keyframes boy_fit {
+    0% {
+        right: 16.5%;
+    }
+    20% {
+        right: 16.5%;
+    }
+    100% {
+        right: -5.5%;
+    }
+}
+
+@-moz-keyframes boy_fit {
+    0% {
+        right: 16.5%;
+    }
+    20% {
+        right: 16.5%;
+    }
+    100% {
+        right: -5.5%;
+    }
+}
+
+@-o-keyframes boy_fit {
+    0% {
+        right: 16.5%;
+    }
+    20% {
+        right: 16.5%;
+    }
+    100% {
+        right: -5.5%;
+    }
+}
+
+@keyframes boy_fit {
+    0% {
+        right: 16.5%;
+    }
+    20% {
+        right: 16.5%;
+    }
+    100% {
+        right: -5.5%;
+    }
+}
+
+#maste-vision-bg > .layer[data-id="1"] > .master-title.active {
+    animation: title_larger 0.5s;
+}
+
+@-webkit-keyframes title_larger {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 65%;
+    }
+}
+
+@-moz-keyframes title_larger {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 65%;
+    }
+}
+
+@-o-keyframes title_larger {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 65%;
+    }
+}
+
+@keyframes title_larger {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 65%;
+    }
+}
+
+#maste-vision-bg > .layer[data-id="1"] > .sub-title.active {
+    animation: sub_title_up 0.5s;
+}
+
+@-webkit-keyframes sub_title_up {
+    0% {
+        top: 30%;
+    }
+    100% {
+        top: 18%;
+    }
+}
+
+@-moz-keyframes sub_title_up {
+    0% {
+        top: 30%;
+    }
+    100% {
+        top: 18%;
+    }
+}
+
+@-o-keyframes sub_title_up {
+    0% {
+        top: 30%;
+    }
+    100% {
+        top: 18%;
+    }
+}
+
+@keyframes sub_title_up {
+    0% {
+        top: 30%;
+    }
+    100% {
+        top: 18%;
+    }
+}
+
+#maste-vision-m-bg .layer > .master-title.active {
+    animation: mobile_title_up 0.5s;
+}
+
+@-webkit-keyframes mobile_title_up {
+    0% {
+        top: 15%;
+    }
+    100% {
+        top: 2%;
+    }
+}
+
+@-moz-keyframes mobile_title_up {
+    0% {
+        top: 15%;
+    }
+    100% {
+        top: 2%;
+    }
+}
+
+@-o-keyframes mobile_title_up {
+    0% {
+        top: 15%;
+    }
+    100% {
+        top: 2%;
+    }
+}
+
+@keyframes mobile_title_up {
+    0% {
+        top: 15%;
+    }
+    100% {
+        top: 2%;
+    }
+}
+
+#maste-vision-m-bg .layer > .sub-title.active {
+    animation: mobile_subtitle_up 0.5s;
+}
+
+@-webkit-keyframes mobile_subtitle_up {
+    0% {
+        top: 12%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+
+@-moz-keyframes mobile_subtitle_up {
+    0% {
+        top: 12%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+
+@-o-keyframes mobile_subtitle_up {
+    0% {
+        top: 12%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+
+@keyframes mobile_subtitle_up {
+    0% {
+        top: 12%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+
+#maste-vision-m-bg .layer > .bubble-01.active {
+    animation: mobile_bubble_up 0.5s;
+}
+
+@-webkit-keyframes mobile_bubble_up {
+    0% {
+        top: 28%;
+    }
+    100% {
+        top: 1%;
+    }
+}
+
+@-moz-keyframes mobile_bubble_up {
+    0% {
+        top: 28%;
+    }
+    100% {
+        top: 1%;
+    }
+}
+
+@-o-keyframes mobile_bubble_up {
+    0% {
+        top: 28%;
+    }
+    100% {
+        top: 1%;
+    }
+}
+
+@keyframes mobile_bubble_up {
+    0% {
+        top: 28%;
+    }
+    100% {
+        top: 1%;
+    }
+}
+
+.bomb-animation.active > img {
+    animation: bomb_animation 0.5s;
+}
+
+@-webkit-keyframes bomb_animation {
+    0% {
+        width: 32%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@-moz-keyframes bomb_animation {
+    0% {
+        width: 32%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@-o-keyframes bomb_animation {
+    0% {
+        width: 32%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes bomb_animation {
+    0% {
+        width: 32%;
+    }
+    100% {
+        width: 100%;
+    }
+}

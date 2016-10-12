@@ -1,0 +1,319 @@
+@media all and (min-width: 640px) {
+    #maste-vision-bg {
+        display: block;
+    }
+    #maste-vision-m-bg {
+        display: none;
+    }
+    #maste-vision-bg .marquee-frame > .marquee > marquee {
+        line-height: 1em;
+        font-size: 16px;
+    }
+}
+
+@media not all and (min-width: 640px) {
+    #maste-vision-bg {
+        display: none;
+    }
+    #maste-vision-m-bg {
+        display: block;
+    }
+}
+
+@media all and (min-width: 768px) {
+    #maste-vision-bg .marquee-frame > .marquee > marquee {
+        line-height: 1.2em;
+        font-size: 18px;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    #maste-vision-bg .marquee-frame > .marquee > marquee {
+        line-height: 1.5em;
+        font-size: 20px;
+    }
+}
+
+@media all and (min-width: 1440px) {
+    #maste-vision-bg .marquee-frame > .marquee > marquee {
+        line-height: 2em;
+        font-size: 22px;
+    }
+}
+
+#maste-vision-bg > .layer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+}
+
+#maste-vision-bg .marquee-frame {
+    position: absolute;
+    top: 1.2%;
+    left: 0;
+    width: 100%;
+    height: 4.5%;
+    z-index: 400;
+}
+
+#maste-vision-bg .marquee-frame > .marquee {
+    position: relative;
+    margin: auto;
+    width: 97.5%;
+    height: 100%;
+    background: #000;
+}
+
+#maste-vision-bg .marquee-frame > .marquee > marquee {
+    color: #fff;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#maste-vision-bg > .layer[data-id="1"] {
+    z-index: 300;
+}
+
+#maste-vision-bg > .layer[data-id="2"] {
+    z-index: 200;
+}
+
+#maste-vision-bg > .layer[data-id="3"] {
+    width: 97.5%;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#maste-vision-bg > .layer[data-id="1"] > .master-title {
+    position: relative;
+    margin: auto;
+    display: block;
+    width: 65%;
+    top: 17%;
+}
+
+#maste-vision-bg > .layer[data-id="1"] > .sub-title {
+    position: relative;
+    margin: auto;
+    display: block;
+    width: 40%;
+    top: 18%;
+}
+
+#maste-vision-bg > .layer[data-id="1"] > .bubble-01 {
+    position: relative;
+    margin: auto;
+    display: block;
+    width: 40%;
+    top: 18%;
+    cursor: pointer;
+}
+
+#maste-vision-bg > .layer[data-id="1"] > .go-icon {
+    position: relative;
+    margin: auto;
+    display: block;
+    width: 12%;
+    top: -3%;
+    left: 18.2%;
+    cursor: pointer;
+}
+
+#maste-vision-bg > .layer[data-id="1"] > .bubble-02 {
+    position: relative;
+    margin: auto;
+    display: block;
+    width: 33%;
+    top: 1%;
+    left: 15%;
+    cursor: pointer;
+}
+
+#maste-vision-bg > .layer[data-id="1"] > .first-icon {
+    position: relative;
+    margin: auto;
+    display: block;
+    width: 10%;
+    top: -15%;
+    left: 32%;
+    cursor: pointer;
+}
+
+#maste-vision-bg > .layer[data-id="1"] > .mine-video {
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    top: 80%;
+    left: 11%;
+    cursor: pointer;
+    /*background: #000;*/
+    /*opacity: 0.5;*/
+}
+
+#maste-vision-bg > .layer[data-id="2"] > .master-vision-logo {
+    position: relative;
+    width: 18%;
+    top: 7%;
+    margin: auto;
+    display: block;
+}
+
+#maste-vision-bg > .layer[data-id="2"] > .hand-left {
+    position: absolute;
+    width: 7%;
+    top: 12.5%;
+    left: 33%;
+}
+
+#maste-vision-bg > .layer[data-id="2"] > .hand-right {
+    position: absolute;
+    width: 7%;
+    top: 12.5%;
+    right: 33%;
+}
+
+#maste-vision-bg > .layer[data-id="2"] > .cloud-left {
+    position: absolute;
+    width: 15%;
+    top: 43%;
+    left: 23%;
+}
+
+#maste-vision-bg > .layer[data-id="2"] > .cloud-right {
+    position: absolute;
+    width: 18%;
+    top: 3%;
+    right: 16%;
+}
+
+#maste-vision-bg > .layer[data-id="3"] > .master-girl {
+    position: absolute;
+    width: 32%;
+    top: 8.2%;
+    /*left: -5.5%;*/
+    left: 19.5%;
+}
+
+#maste-vision-bg > .layer[data-id="3"] > .master-boy {
+    position: absolute;
+    width: 32%;
+    top: 8.2%;
+    /*right: -5.5%;*/
+    right: 16.5%;
+}
+
+#maste-vision-bg > .layer[data-id="3"] > .master-girl.start-pos {
+    left: 19.5%;
+}
+
+#maste-vision-bg > .layer[data-id="3"] > .master-boy.start-pos {
+    right: 16.5%;
+}
+
+#maste-vision-bg > .layer[data-id="3"] > .master-girl.end-pos {
+    left: -5.5%;
+}
+
+#maste-vision-bg > .layer[data-id="3"] > .master-boy.end-pos {
+    right: -5.5%;
+}
+
+.second-vision {
+    position: relative;
+    margin-top: 15px;
+}
+
+.second-vision > .second-vision-img {
+    position: relative;
+}
+
+#maste-vision-m-bg .bubble-02-bg {
+    border: 3px solid #fff;
+}
+
+#maste-vision-m-bg .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#maste-vision-m-bg .layer > .mine-2016 {
+    position: relative;
+    top: 2.5%;
+    width: 60%;
+    margin: auto;
+    display: block;
+}
+
+#maste-vision-m-bg .layer > .master-title {
+    position: relative;
+    top: 2%;
+    width: 95%;
+    margin: auto;
+    display: block;
+}
+
+#maste-vision-m-bg .layer > .sub-title {
+    position: relative;
+    top: 0%;
+    width: 90%;
+    margin: auto;
+    display: block;
+}
+
+#maste-vision-m-bg .layer > .bubble-01 {
+    position: relative;
+    top: 1%;
+    width: 85%;
+    margin: auto;
+    display: block;
+}
+
+#maste-vision-m-bg .layer > .go-icon {
+    position: relative;
+    top: -4%;
+    width: 32%;
+    margin: auto;
+    display: block;
+}
+
+#maste-vision-m-bg .layer > .bubble-02 {
+    position: relative;
+    top: -45%;
+    right: 5%;
+    width: 64%;
+    margin: auto;
+    display: block;
+}
+
+#maste-vision-m-bg .layer > .first-icon {
+    position: absolute;
+    top: 0%;
+    right: 10%;
+    width: 20%;
+}
+
+#maste-vision-m-bg .layer > .marquee-frame {
+    position: relative;
+    background: #000;
+    top: 0.5%;
+    width: 96.5%;
+    margin: auto;
+    display: block;
+}
+
+#maste-vision-m-bg .layer > .marquee-frame > .marquee {
+    font-size: 18px;
+    line-height: 1.5em;
+    color: #fff;
+    padding-top: 2%;
+    font-weight: bold;
+}

@@ -1,0 +1,86 @@
+body {
+  background: url("../img/bg.jpg"); }
+
+h1, h2, p {
+  font-weight: 600; }
+
+p, li, span {
+  font-size: 14px;
+  line-height: 24px; }
+
+ol {
+  padding-left: 28px;
+  text-indent: -16px; }
+
+h1 {
+  color: #d10a27;
+  font-size: 26px;
+  text-align: center;
+  line-height: 52px;
+  font-weight: 900; }
+
+h2 {
+  margin-top: 20px;
+  color: #d10a27;
+  line-height: 32px;
+  font-size: 16px;
+  font-weight: 900; }
+  h2 span {
+    color: #000;
+    font-weight: 500; }
+
+table, th, td {
+  border: 1px solid #000; }
+
+th, td {
+  font-size: 16px;
+  padding: 5px 10px;
+  vertical-align: middle;
+  line-height: 20px; }
+
+table {
+  width: 96%;
+  margin: 0 auto; }
+
+th {
+  font-weight: 600;
+  background-color: #d10a27;
+  color: #fff; }
+  th span {
+    font-weight: 500;
+    font-size: 14px; }
+
+.role_top {
+  width: 640px; }
+  .role_top img {
+    width: 100%; }
+
+.role_wrap {
+  width: 640px;
+  height: auto;
+  margin: 0 auto;
+  background-color: #d10a27;
+  background: transparent;
+  padding-bottom: 100px; }
+  .role_wrap .role_main {
+    width: 94%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    padding-bottom: 50px;
+    box-sizing: border-box; }
+    .role_wrap .role_main .role_title_p {
+      text-align: center; }
+
+.table_place_area {
+  width: 48%; }
+
+.table_place_date {
+  width: 20%; }
+
+.table_price_name {
+  width: 36%; }
+
+.table_price_price {
+  width: 60%; }

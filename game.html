@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="utf-8">
+    <title>麥香2016超友力擂台賽</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="麥香2016超友力擂台賽" />
+    <meta property="og:image" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <link rel="shortcut icon" href="img/main/mine_favicon.ico">
+    <!-- CSS -->
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/game.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: '1582634928709967',
+            xfbml: true,
+            version: 'v2.7'
+        });
+
+        fbApiInit = true; //init flag
+        user_fb = {}; //user fbid, name
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <button type="button" id="fb-share-btn" style="display: none;">FB share button</button>
+    <div id="pre-load" class="loading-effect">
+        <img class="loading-effect-pic" src="img/main/loading.gif" />
+        <div class="loading-effect-opacity"></div>
+    </div>
+    <header>
+        <div class="mineshine-menu-desktop game">
+            <div class="menu-item">
+                <img class="home-icon" src="img/main/home_icon.png" />
+            </div>
+            <div class="menu-item">
+                <img class="mineshine-logo" src="img/main/mineshine_logo_mobile.png" />
+            </div>
+            <div class="menu-item fbshare-area" sid="">
+                <span>
+                    <img class="fbshare-btn" src="img/main/fbshare_btn.png" />
+                </span>
+                <span>登入</span>
+            </div>
+        </div>
+        <div class="mineshine-menu-mobile">
+            <img class="home-icon" src="img/main/home_icon.png" />
+            <img class="mineshine-logo" src="img/main/mineshine_logo_mobile.png" />
+            <div class="fbshare-area" sid="">
+                <span>
+                    <img class="fbshare-btn" src="img/main/fbshare_btn.png" />
+                </span>
+                <span>登入</span>
+            </div>
+        </div>
+    </header>
+    <div class="wrap">
+        <div class="container">
+            <div class="header-space"></div>
+            <!-- desktop start -->
+            <div id="game-bg" class="main-bg game-bg">
+                <div class="row">
+                    <img class="col-1 game-bg-img" src="img/game/game_bg0.png">
+                    <div class="play-info game-cover">
+                        <img class="game-title" src="img/game/game_catch.png">
+                        <!-- 每日首次禮 -->
+                        <div class="game-content first-gift">
+                            <img class="first-msg" src="img/game/game_sub1.png">
+                            <img class="add-one" src="img/game/game_bw1.png">
+                            <div class="btn-g">
+                                <img class="go-play" src="img/game/game_btn1.png">
+                                <img class="back-home" src="img/game/game_btn2.png">
+                            </div>
+                        </div>
+                        <!-- 遊戲規則說明 -->
+                        <div class="game-content info">
+                            <img class="info-msg" src="img/game/game_bw2.png">
+                            <img class="ready-go" src="img/game/game_btn3.png">
+                        </div>
+                        <!-- 遊戲完成 -->
+                        <div class="game-content game-done">
+                            <img class="add-scores" src="img/game/game_bw3_0.png">
+                            <p class="which-school">
+                                <span class="school-name">中山高中</span>
+                                <span class="sign">+</span>
+                                <span class="scores">3</span>
+                            </p>
+                            <div class="btn-g">
+                                <img class="share-fb" src="img/game/game_btn4.png">
+                                <img class="done-home" src="img/game/game_btn5.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 抽獎畫面 desktop start -->
+                    <div class="play-award game-cover">
+                        <div class="layer" data-id="1">
+                            <img class="award-title" src="img/award/lucky-draw.png">  
+                            <img class="bomb" src="img/award/bomb-0.png">
+                        </div>
+                        <div class="layer" data-id="2">
+                            <img class="prize" src="">
+                            <img class="msg" src="img/award/Continue-to-challenge.png">
+                        </div>
+                        <div class="layer" data-id="3">
+                            <img class="people" src="img/award/people.png">
+                        </div>
+                        <div class="layer" data-id="4">
+                            <img class="confirm-icon" src="img/award/confirm-icon.png">
+                        </div>
+                    </div>
+                    <!-- 抽獎畫面 desktop end -->
+                    <!-- 遊戲範圍 desktop start -->
+                    <div class="play-game game-cover">
+                        <div class="test-group">
+                            <div class="timer">
+                                <p class="timer-text">Time:</p>
+                                <p class="timer-num">3</p>
+                            </div>
+                            <div class="test-text" data-id="1">
+                                <img src="img/game/game_test1.png">
+                            </div>
+                            <div class="test-text" data-id="2">
+                                <img src="img/game/game_test2_2.png">
+                            </div>
+                            <div class="test-text" data-id="3">
+                                <img src="img/game/game_test3_2.png">
+                            </div>
+                        </div>
+                        <div class="mine-ques">
+                            <img src="">
+                        </div>
+                        <div class="mine-ans-group">
+                            <div class="game-miss">
+                                <img src="img/game/game_miss.png">
+                            </div>
+                            <div class="mine-ans is-answer" data-id="1">
+                                <img src="">
+                            </div>
+                            <div class="mine-ans" data-id="2">
+                                <img src="">
+                            </div>
+                            <div class="mine-ans" data-id="3">
+                                <img src="">
+                            </div>
+                            <div class="mine-ans" data-id="4">
+                                <img src="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- desktop end -->
+            <!-- mobile start -->
+            <div id="game-mobile-bg" class="main-bg game-bg">
+                <div class="row">
+                    <img class="col-1 game-bg-img" src="img/game_mobile/game_bg0.png">
+                    <div class="play-info game-cover">
+                        <img class="game-title" src="img/game/game_catch.png">
+                        <!-- 每日首次禮 -->
+                        <div class="game-content first-gift">
+                            <img class="first-msg" src="img/game/game_sub1.png">
+                            <img class="add-one" src="img/game/game_bw1.png">
+                            <div class="btn-g">
+                                <img class="go-play" src="img/game/game_btn1.png">
+                                <img class="back-home" src="img/game/game_btn2.png">
+                            </div>
+                        </div>
+                        <!-- 遊戲規則說明 -->
+                        <div class="game-content info">
+                            <img class="info-msg" src="img/game/game_bw2.png">
+                            <img class="ready-go" src="img/game/game_btn3.png">
+                        </div>
+                        <!-- 遊戲完成 -->
+                        <div class="game-content game-done">
+                            <img class="add-scores" src="img/game/game_bw3_0.png">
+                            <p class="which-school">
+                                <span class="school-name">中山高中</span>
+                                <span class="sign">+</span>
+                                <span class="scores">3</span>
+                            </p>
+                            <div class="btn-g">
+                                <img class="share-fb" src="img/game/game_btn4.png">
+                                <img class="done-home" src="img/game/game_btn5.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 抽獎畫面 mobile start -->
+                    <div class="play-award game-cover">
+                        <div class="layer" data-id="1">
+                            <img class="award-title" src="img/award/lucky-draw.png">  
+                            <img class="bomb" src="img/award/bomb-0.png">
+                        </div>
+                        <div class="layer" data-id="2">
+                            <img class="prize" src="">
+                            <img class="msg" src="img/award/Continue-to-challenge.png">
+                        </div>
+                        <div class="layer" data-id="3">
+                            <img class="people" src="img/award/people.png">
+                        </div>
+                        <div class="layer" data-id="4">
+                            <img class="confirm-icon" src="img/award/confirm-icon.png">
+                        </div>
+                    </div>
+                    <!-- 抽獎畫面 mobile end -->
+                    <!-- 遊戲範圍 start -->
+                    <div class="play-game game-cover">
+                        <div class="test-group">
+                            <div class="timer">
+                                <p class="timer-text">Time</p>
+                                <p class="timer-num">3</p>
+                                <div class="timer-opacity"></div>
+                            </div>
+                            <div class="test-text" data-id="1">
+                                <img src="img/game/game_test1.png">
+                            </div>
+                            <div class="test-text" data-id="2">
+                                <img src="img/game/game_test2_2.png">
+                            </div>
+                            <div class="test-text" data-id="3">
+                                <img src="img/game/game_test3_2.png">
+                            </div>
+                        </div>
+                        <div class="mine-ques">
+                            <img src="">
+                        </div>
+                        <div class="mine-ans-group">
+                            <div class="game-miss">
+                                <img src="img/game/game_miss.png">
+                            </div>
+                            <div class="mine-ans is-answer" data-id="1">
+                                <img src="">
+                            </div>
+                            <div class="mine-ans" data-id="2">
+                                <img src="">
+                            </div>
+                            <div class="mine-ans" data-id="3">
+                                <img src="">
+                            </div>
+                            <div class="mine-ans" data-id="4">
+                                <img src="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 遊戲範圍 start -->
+                </div>
+            </div>
+            <!-- mobile end -->
+        </div>
+    </div>
+    <script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+</body>
+
+</html>

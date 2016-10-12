@@ -1,0 +1,584 @@
+.play-game.game-cover {
+    display: none;
+}
+
+.game-content.first-gift {
+    display: none;
+}
+
+.game-content.info {
+    display: none;
+}
+
+.game-content.game-done {
+    display: none;
+}
+
+.play-award.game-cover {
+    display: none;
+}
+
+@media all and (min-width: 640px) {
+    #game-bg {
+        width: 100%;
+        border: 0;
+        display: block;
+    }
+    #game-mobile-bg {
+        display: none;
+    }
+    #game-bg .game-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    #game-bg .play-game.game-cover > .test-group {
+        position: relative;
+        width: 50%;
+        margin: auto;
+        display: block;
+        text-align: center;
+        top: 3%;
+        z-index: 200;
+    }
+    #game-bg .play-game.game-cover > .test-group > .timer {
+        position: absolute;
+        width: 18%;
+        top: 0%;
+        right: -6%;
+        display: block;
+    }
+    #game-bg .play-game.game-cover > .test-group > .timer > .timer-text {
+        font-size: 24px;
+        color: #fff;
+        display: inline-block;
+    }
+    #game-bg .play-game.game-cover > .test-group > .timer > .timer-num {
+        font-size: 36px;
+        color: #fff;
+        display: inline-block;
+        padding-left: 2%;
+        padding-top: 5%;
+    }
+    #game-bg .play-game.game-cover > .test-group > .test-text {
+        position: relative;
+        display: inline-block;
+        width: 25%;
+    }
+    #game-bg .play-game.game-cover > .test-group > .test-text > img {
+        width: 90%;
+    }
+    #game-bg .play-game.game-cover >.mine-ques {
+        position: relative;
+        width: 30%;
+        margin: auto;
+        display: block;
+        text-align: center;
+        top: 2%;
+        z-index: 100;
+    }
+    #game-bg .play-game.game-cover >.mine-ques > img {
+        width: 100%;
+    }
+    #game-bg .play-game.game-cover > .mine-ans-group {
+        position: relative;
+        width: 30%;
+        margin: auto;
+        display: block;
+        text-align: center;
+        top: 3%;
+    }
+    #game-bg .play-game.game-cover > .mine-ans-group > .mine-ans {
+        position: relative;
+        display: inline-block;
+        width: 47%;
+        margin: 0.5%;
+        cursor: pointer;
+    }
+    #game-bg .play-game.game-cover > .mine-ans-group > .mine-ans > img {
+        width: 100%;
+    }
+    #game-bg .play-game.game-cover > .mine-ans-group > .game-miss {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 90%;
+        z-index: 10;
+        display: none;
+    }
+    #game-bg .play-game.game-cover > .mine-ans-group > .game-miss > img {
+        width: 100%;
+    }
+    #game-bg .play-game.game-cover > .mine-ans-group > .mine-ans > .game-yes,
+    #game-bg .play-game.game-cover > .mine-ans-group > .mine-ans > .game-no {
+        position: absolute;
+        top: -20%;
+        left: -20%;
+        width: 100%;
+        z-index: 1000;
+    }
+    #game-bg .play-game.game-cover > .mine-ans-group > .mine-ans > .game-yes > img,
+    #game-bg .play-game.game-cover > .mine-ans-group > .mine-ans > .game-no > img {
+        width: 150%;
+    }
+    #game-bg .play-info.game-cover > .game-title {
+        position: relative;
+        top: 2%;
+        width: 60%;
+        margin: auto;
+        display: block;
+    }
+    #game-bg .play-info.game-cover > .game-content {
+        position: relative;
+        top: 0%;
+        width: 100%;
+        height: 75%;
+        margin: auto;
+    }
+    #game-bg .play-info.game-cover > .game-content.first-gift > .first-msg {
+        position: relative;
+        top: 5%;
+        width: 23%;
+        margin: auto;
+        display: block;
+        z-index: 10;
+    }
+    #game-bg .play-info.game-cover > .game-content.first-gift > .add-one {
+        position: relative;
+        top: 2%;
+        width: 45%;
+        margin: auto;
+        display: block;
+    }
+    #game-bg .play-info.game-cover > .game-content.first-gift > .btn-g {
+        position: relative;
+        top: -5%;
+        width: 100%;
+        margin: auto;
+        display: block;
+        text-align: center;
+        z-index: 10;
+    }
+    #game-bg .play-info.game-cover > .game-content.first-gift > .btn-g > .go-play,
+    #game-bg .play-info.game-cover > .game-content.first-gift > .btn-g > .back-home {
+        width: 12%;
+        display: inline-block;
+        margin-left: 1%;
+        margin-right: 1%;
+        cursor: pointer;
+    }
+    #game-bg .play-info.game-cover > .game-content.info > .info-msg {
+        position: relative;
+        top: 0%;
+        width: 50%;
+        margin: auto;
+        display: block;
+    }
+    #game-bg .play-info.game-cover > .game-content.info > .ready-go {
+        position: relative;
+        top: -25%;
+        width: 20%;
+        margin: auto;
+        display: block;
+        z-index: 10;
+        cursor: pointer;
+    }
+    #game-bg .play-info.game-cover > .game-content.game-done > .add-scores {
+        position: relative;
+        top: 4%;
+        width: 45%;
+        margin: auto;
+        display: block;
+    }
+    #game-bg .play-info.game-cover > .game-content.game-done > .which-school {
+        position: relative;
+        top: 2%;
+        margin: auto;
+        display: block;
+        font-size: 36px;
+        color: #fff;
+        font-weight: bold;
+    }
+    #game-bg .play-info.game-cover > .game-content.game-done > .btn-g {
+        position: relative;
+        top: 6%;
+        width: 100%;
+        margin: auto;
+        display: block;
+        text-align: center;
+        z-index: 10;
+    }
+    #game-bg .play-info.game-cover > .game-content.game-done > .btn-g > .share-fb,
+    #game-bg .play-info.game-cover > .game-content.game-done > .btn-g > .done-home {
+        width: 12%;
+        display: inline-block;
+        margin-left: 1%;
+        margin-right: 1%;
+        cursor: pointer;
+    }
+    #game-bg .play-info.game-cover > .game-content.game-done > .btn-g > .share-fb {
+        vertical-align: top;
+    }
+    #game-bg .play-award.game-cover > .layer {
+        position: absolute;
+        left: 0%;
+        height: 0%;
+        width: 100%;
+        height: 100%;
+    }
+    #game-bg .play-award.game-cover > .layer[data-id="1"] {
+        z-index: 100;
+    }
+    #game-bg .play-award.game-cover > .layer[data-id="1"] > .award-title {
+        position: relative;
+        top: 2%;
+        width: 48%;
+        margin: auto;
+        display: block;
+    }
+    #game-bg .play-award.game-cover > .layer[data-id="1"] > .bomb {
+        position: relative;
+        top: 4%;
+        width: 30%;
+        margin: auto;
+        display: block;
+    }
+    #game-bg .play-award.game-cover > .layer[data-id="2"] {
+        z-index: 200;
+    }
+    #game-bg .play-award.game-cover > .layer[data-id="2"] > .prize {
+        position: relative;
+        top: 3%;
+        width: 35%;
+        margin: auto;
+        display: block;
+    }
+    #game-bg .play-award.game-cover > .layer[data-id="2"] > .msg {
+        position: relative;
+        top: -18%;
+        width: 25%;
+        margin: auto;
+        display: block;
+    }
+    #game-bg .play-award.game-cover > .layer[data-id="3"] {
+        z-index: 300;
+    }
+    #game-bg .play-award.game-cover > .layer[data-id="3"] > .people {
+        position: relative;
+        top: 60%;
+        width: 60%;
+        margin: auto;
+        display: block;
+    }
+    #game-bg .play-award.game-cover > .layer[data-id="4"] {
+        z-index: 400;
+    }
+    #game-bg .play-award.game-cover > .layer[data-id="4"] > .confirm-icon {
+        position: relative;
+        top: 82%;
+        width: 10%;
+        margin: auto;
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media all and (min-width: 1300px) {
+    #game-bg {
+        width: 90%;
+    }
+}
+
+@media all and (min-width: 1350px) {
+    #game-bg {
+        width: 95%;
+    }
+}
+
+@media all and (min-width: 1400px) {
+    #game-bg {
+        width: 85%;
+    }
+}
+
+@media all and (min-width: 1450px) {
+    #game-bg {
+        width: 83%;
+    }
+}
+
+@media not all and (min-width: 640px) {
+    #game-bg {
+        display: none;
+    }
+    #game-mobile-bg {
+        display: block;
+        border: 0;
+        width: 100%;
+    }
+    #game-mobile-bg .game-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    #game-mobile-bg .play-game.game-cover > .test-group {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        display: block;
+        text-align: center;
+        top: 4%;
+        z-index: 200;
+    }
+    #game-mobile-bg .play-game.game-cover > .test-group > .timer {
+        position: absolute;
+        top: 100%;
+        right: 2%;
+        background: #000;
+        border-radius: 99em;
+        opacity: 0.9;
+        padding: 10px;
+        display: block;
+    }
+    #game-mobile-bg .play-game.game-cover > .test-group > .timer > .timer-text {
+        font-size: 18px;
+        color: #fff;
+    }
+    #game-mobile-bg .play-game.game-cover > .test-group > .timer > .timer-num {
+        font-size: 24px;
+        color: #fff;
+    }
+    #game-mobile-bg .play-game.game-cover > .test-group > .test-text {
+        position: relative;
+        display: inline-block;
+        width: 25%;
+    }
+    #game-mobile-bg .play-game.game-cover > .test-group > .test-text > img {
+        width: 90%;
+    }
+    #game-mobile-bg .play-game.game-cover >.mine-ques {
+        position: relative;
+        width: 65%;
+        margin: auto;
+        display: block;
+        text-align: center;
+        top: 2%;
+        z-index: 100;
+    }
+    #game-mobile-bg .play-game.game-cover >.mine-ques > img {
+        width: 100%;
+    }
+    #game-mobile-bg .play-game.game-cover > .mine-ans-group {
+        position: relative;
+        width: 67%;
+        margin: auto;
+        display: block;
+        text-align: center;
+        top: 5%;
+    }
+    #game-mobile-bg .play-game.game-cover > .mine-ans-group > .mine-ans {
+        position: relative;
+        display: inline-block;
+        width: 47%;
+        margin: 0.5%;
+        cursor: pointer;
+    }
+    #game-mobile-bg .play-game.game-cover > .mine-ans-group > .mine-ans > img {
+        width: 100%;
+    }
+    #game-mobile-bg .play-game.game-cover > .mine-ans-group > .game-miss {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 90%;
+        z-index: 10;
+        display: none;
+    }
+    #game-mobile-bg .play-game.game-cover > .mine-ans-group > .game-miss > img {
+        width: 100%;
+    }
+    #game-mobile-bg .play-game.game-cover > .mine-ans-group > .mine-ans > .game-yes,
+    #game-mobile-bg .play-game.game-cover > .mine-ans-group > .mine-ans > .game-no {
+        position: absolute;
+        top: -20%;
+        left: -20%;
+        width: 100%;
+        z-index: 1000;
+    }
+    #game-mobile-bg .play-game.game-cover > .mine-ans-group > .mine-ans > .game-yes > img,
+    #game-mobile-bg .play-game.game-cover > .mine-ans-group > .mine-ans > .game-no > img {
+        width: 150%;
+    }
+    #game-mobile-bg .play-info.game-cover > .game-title {
+        position: relative;
+        top: 5%;
+        width: 98%;
+        margin: auto;
+        display: block;
+    }
+    #game-mobile-bg .play-info.game-cover > .game-content {
+        position: relative;
+        top: 4%;
+        width: 100%;
+        height: 76%;
+        margin: auto;
+    }
+    #game-mobile-bg .play-info.game-cover > .game-content.first-gift > .first-msg {
+        position: relative;
+        top: 2%;
+        width: 50%;
+        margin: auto;
+        display: block;
+        z-index: 10;
+    }
+    #game-mobile-bg .play-info.game-cover > .game-content.first-gift > .add-one {
+        position: relative;
+        top: -4%;
+        width: 98%;
+        margin: auto;
+        display: block;
+    }
+    #game-mobile-bg .play-info.game-cover > .game-content.first-gift > .btn-g {
+        position: relative;
+        top: -8%;
+        width: 100%;
+        margin: auto;
+        display: block;
+        text-align: center;
+        z-index: 10;
+    }
+    #game-mobile-bg .play-info.game-cover > .game-content.first-gift > .btn-g > .go-play,
+    #game-mobile-bg .play-info.game-cover > .game-content.first-gift > .btn-g > .back-home {
+        width: 30%;
+        display: inline-block;
+        margin-left: 1%;
+        margin-right: 1%;
+        cursor: pointer;
+    }
+    #game-mobile-bg .play-info.game-cover > .game-content.info > .info-msg {
+        position: relative;
+        top: 0%;
+        width: 100%;
+        margin: auto;
+        display: block;
+    }
+    #game-mobile-bg .play-info.game-cover > .game-content.info > .ready-go {
+        position: relative;
+        top: -20%;
+        width: 40%;
+        margin: auto;
+        display: block;
+        z-index: 10;
+        cursor: pointer;
+    }
+    #game-mobile-bg .play-info.game-cover > .game-content.game-done > .add-scores {
+        position: relative;
+        top: 4%;
+        width: 80%;
+        margin: auto;
+        display: block;
+    }
+    #game-mobile-bg .play-info.game-cover > .game-content.game-done > .which-school {
+        position: relative;
+        top: 6%;
+        margin: auto;
+        display: block;
+        font-size: 28px;
+        color: #fff;
+        font-weight: bold;
+    }
+    #game-mobile-bg .play-info.game-cover > .game-content.game-done > .btn-g {
+        position: relative;
+        top: 10%;
+        width: 100%;
+        margin: auto;
+        display: block;
+        text-align: center;
+        z-index: 10;
+    }
+    #game-mobile-bg .play-info.game-cover > .game-content.game-done > .btn-g > .share-fb,
+    #game-mobile-bg .play-info.game-cover > .game-content.game-done > .btn-g > .done-home {
+        width: 30%;
+        display: inline-block;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+        cursor: pointer;
+    }
+    #game-mobile-bg .play-info.game-cover > .game-content.game-done > .btn-g > .share-fb {
+        vertical-align: top;
+    }
+    #game-mobile-bg .play-award.game-cover > .layer {
+        position: absolute;
+        left: 0%;
+        height: 0%;
+        width: 100%;
+        height: 100%;
+    }
+    #game-mobile-bg .play-award.game-cover > .layer[data-id="1"] {
+        z-index: 100;
+    }
+    #game-mobile-bg .play-award.game-cover > .layer[data-id="1"] > .award-title {
+        position: relative;
+        top: 5%;
+        width: 82%;
+        margin: auto;
+        display: block;
+    }
+    #game-mobile-bg .play-award.game-cover > .layer[data-id="1"] > .bomb {
+        position: relative;
+        top: 12%;
+        width: 55%;
+        margin: auto;
+        display: block;
+    }
+    #game-mobile-bg .play-award.game-cover > .layer[data-id="2"] {
+        z-index: 200;
+    }
+    #game-mobile-bg .play-award.game-cover > .layer[data-id="2"] > .prize {
+        position: relative;
+        top: 8%;
+        width: 70%;
+        margin: auto;
+        display: block;
+    }
+    #game-mobile-bg .play-award.game-cover > .layer[data-id="2"] > .msg {
+        position: relative;
+        top: -22%;
+        width: 65%;
+        margin: auto;
+        display: block;
+    }
+    #game-mobile-bg .play-award.game-cover > .layer[data-id="3"] {
+        z-index: 300;
+    }
+    #game-mobile-bg .play-award.game-cover > .layer[data-id="3"] > .people {
+        position: relative;
+        top: 65%;
+        width: 90%;
+        margin: auto;
+        display: block;
+    }
+    #game-mobile-bg .play-award.game-cover > .layer[data-id="4"] {
+        z-index: 400;
+    }
+    #game-mobile-bg .play-award.game-cover > .layer[data-id="4"] > .confirm-icon {
+        position: relative;
+        top: 76%;
+        width: 28%;
+        margin: auto;
+        display: block;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,279 @@
+@media screen and (min-width: 1001px) {
+    .school-menu {
+        border: 3px solid #fff;
+    }
+    .school-menu-select {
+        width: 40%;
+    }
+    .school-menu-content.normal {
+        width: 59%;
+    }
+    .school-menu-content.is-mobile {
+        display: none;
+    }
+    .school-menu-select .school-select {
+        width: 40%;
+        margin: 1%;
+    }
+    .school-menu-select .school-search-area {
+        width: 87%;
+    }
+    .scroll-down-mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .school-menu {
+        border: 3px solid #fff;
+    }
+    .school-menu-select {
+        width: 40%;
+    }
+    .school-menu-content.normal {
+        width: 59%;
+    }
+    .school-menu-content.is-mobile {
+        display: none;
+    }
+    .school-menu-select .school-select {
+        width: 45%;
+        margin: 1%;
+    }
+    .school-menu-select .school-search-area {
+        width: 97%;
+    }
+    .scroll-down-mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .school-menu {
+        border: 3px solid #fff;
+    }
+    .school-menu-select {
+        width: 100%;
+    }
+    .school-menu-content.normal {
+        width: 0%;
+        display: none;
+    }
+    .school-menu-content.is-mobile {
+        margin: 10px auto;
+        width: 95%;
+        display: block;
+    }
+    .school-menu-select .school-select {
+        width: 42%;
+        margin: 1%;
+    }
+    .school-menu-select .school-search-area {
+        width: 90%;
+    }
+    .scroll-down-mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .school-menu {
+        border: 0;
+    }
+    .school-menu-select {
+        width: 100%;
+    }
+    .school-menu-content.normal {
+        width: 0%;
+        display: none;
+    }
+    .school-menu-content.is-mobile {
+        margin: 10px auto;
+        width: 95%;
+        display: block;
+    }
+    .school-menu-select .school-select {
+        width: 45%;
+        margin: 1%;
+    }
+    .school-menu-select .school-search-area {
+        width: 97%;
+    }
+    .scroll-down-mobile {
+        display: block;
+    }
+}
+
+.school-menu {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    display: block;
+    padding-top: 1.5%;
+    padding-bottom: 0.8%;
+    padding-left: 0.5%;
+    padding-right: 0.2%;
+}
+
+.search-school-slogan {
+    margin: 10px auto;
+    display: block;
+    width: 95%;
+}
+
+.school-menu-select {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    /*background: #ffbf00;*/
+    vertical-align: top;
+    padding: 3px;
+}
+
+.school-menu-select .school-search-area {
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.school-menu-select .school-search-area > img.search-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 45px;
+    cursor: pointer;
+}
+
+.school-menu-select .school-search-area > .school-search {
+    position: relative;
+    height: 45px;
+    width: calc(97% - 45px);
+    margin-left: 2%;
+    display: block;
+}
+
+.school-menu-select .row {
+    text-align: center;
+}
+
+.school-menu-select .school-select {
+    position: relative;
+    display: inline-block;
+}
+
+.school-menu-select .school-select > img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.school-menu-content {
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    overflow: auto;
+}
+
+.school-menu-content > .content-title,
+.school-menu-content > .content-row {
+    width: 95%;
+    margin: auto;
+    padding: 5px;
+    padding-left: 3%;
+}
+
+.school-menu-content > .content-title {
+    border-bottom: 1px solid #666;
+}
+
+.school-menu-content > .content-title > .which-section {
+    color: #d10a27;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.school-menu-content > .content-title > .description {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.school-menu-content > .content-row {
+    border-bottom: 1px dotted #666;
+    font-weight: bolder;
+    clear: both;
+}
+
+.school-menu-content > .content-row[seq-id="0"] {
+    margin-top: 10px;
+}
+
+.school-menu-content > .content-row .which-section,
+.school-menu-content > .content-row .school-name,
+.school-menu-content > .content-row .scores {
+    line-height: 45px;
+    vertical-align: bottom;
+}
+
+.school-menu-content > .content-row .which-section {
+    font-size: 14px;
+    color: #666;
+}
+
+.school-menu-content > .content-row .school-name {
+    font-size: 17px;
+    margin-left: 10px;
+    display: inline-block;
+    width: 75%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.school-menu-content > .content-row > .content-sub-row.flex {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.school-menu-content > .content-row > .content-sub-row.flex > .scores {
+    margin-right: 15px;
+    color: #d10a27;
+}
+
+.school-menu-content > .content-row > .content-sub-row.flex > .play,
+.school-menu-content > .content-row > .content-sub-row.flex > .play-done {
+    margin-right: 15px;
+    height: 45px;
+}
+
+.school-menu-content > .content-row > .content-sub-row.flex > .play {
+    cursor: pointer;
+}
+
+.scroll-down-mobile {
+    position: relative;
+    margin: auto;
+    padding: 5px;
+    top: -15px;
+    /*background: #fff;*/
+}
+
+.f-btn {
+    margin-right: 8px;
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+    white-space: nowrap;
+    background-color: #999;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.f-btn.active {
+    border: 1px solid #000;
+    background-color: #fff !important;
+    color: #000 !important;
+    text-shadow: none !important;
+}
