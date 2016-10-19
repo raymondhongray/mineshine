@@ -44,7 +44,7 @@ function filter_by_city(filter_obj) {
     content_obj.find('.content-row').css('display', 'none');
 
     if (cid == 'all') {
-        
+
         content_obj.find('.content-row').css('display', 'block');
         content_obj.find('.content-row.clone-me').css('display', 'none');
     } else {
@@ -52,10 +52,10 @@ function filter_by_city(filter_obj) {
         content_obj.find('.content-row[cid="' + cid + '"]').css('display', 'block');
         if (cid == 7) {
             content_obj.find('.content-row[cid="8"]').css('display', 'block');
-        } 
+        }
         if (cid == 15) {
             content_obj.find('.content-row[cid="16"]').css('display', 'block');
-        } 
+        }
     }
 
     content_obj.find('.f-btn').removeClass('active');
@@ -218,6 +218,9 @@ function set_school_menu() {
         $('.school-menu-content.normal[section-id="1"]').css('display', 'inline-block');
     }
 
+    // 處理重複的和美高中
+    $('.content-row[sid="291"]').remove();
+
     school_menu_init_done = true;
 }
 
@@ -280,9 +283,20 @@ function set_each_school_content(school_section, section_id, is_mobile) {
 
         if (each_school['today'] == 1) {
             target.find('.play').addClass('play-done');
-            target.find('.play').attr('src', 'img/section_btn/play_off.png')
+            target.find('.play').attr('src', 'img/section_btn/play_off.png');
             target.find('.play-done').removeClass('play');
         }
+    }
+
+    if (is_expired == 1) {
+        var game_code = getQueryStrByName('play_game')
+
+        if (!(game_code != null && game_code != '')) {
+            $('.play').addClass('play-done');
+            $('.play').attr('src', 'img/section_btn/play_off.png');
+            $('.play-done').removeClass('play');
+        }
+
     }
 }
 
@@ -389,6 +403,11 @@ $(document).ready(function() {
 
         // 把所有 clone-me 關閉
         $('.clone-me').css('display', 'none');
+
+        if ($('.content-row[sid="291"]').length == 1) {
+            // 處理重複的和美高中
+            $('.content-row[sid="291"]').remove();
+        }
 
         setTimeout(function() {
             stop_loading($('#pre-load'));

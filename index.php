@@ -216,8 +216,10 @@ function check_user_agent ( $type = NULL ) {
             </div>
         </div>
     </header>
-    <img class="fb-share-index is-desktop" src="img/master_vision/fb-share-icon.png" onclick="ga('send', 'event', '首頁', 'Click', 'FB分享網站');"/>
-    <img class="fb-share-index is-mobile" src="img/master_vision_mobile/fb-share-icon.png" onclick="ga('send', 'event', '首頁', 'Click', 'FB分享網站(mobile)');"/>
+    <!-- <img class="fb-share-index is-desktop" src="img/master_vision/fb-share-icon.png" onclick="ga('send', 'event', '首頁', 'Click', 'FB分享網站');"/> -->
+    <!-- <img class="fb-share-index is-mobile" src="img/master_vision_mobile/fb-share-icon.png" onclick="ga('send', 'event', '首頁', 'Click', 'FB分享網站(mobile)');"/> -->
+    <img class="fb-share-index is-desktop" src="img/master_vision/fb-share-icon.png" onclick="ga('send', 'event', '首頁', 'Click', '投票');"/>
+    <img class="fb-share-index is-mobile" src="img/master_vision_mobile/fb-share-icon.png" onclick="ga('send', 'event', '首頁', 'Click', '投票(mobile)');"/>
     <div class="wrap">
         <div class="container">
             <div class="header-space"></div>
@@ -244,7 +246,7 @@ function check_user_agent ( $type = NULL ) {
                     <img class="bubble-01" src="img/master_vision/bubble-01.png" onclick="ga('send', 'event', '首頁', 'Click', '校際卡位文字(主視覺)');">
                     <img class="go-icon" src="img/master_vision/go-icon.png" onclick="ga('send', 'event', '首頁', 'Click', '校際卡位Go(主視覺)');">
                     <img class="bubble-02" src="img/master_vision/bubble-02.png" onclick="ga('send', 'event', '首頁', 'Click', '第二彈(主視覺)');">
-                    <img class="first-icon" src="img/master_vision/first-icon.png" onclick="ga('send', 'event', '首頁', 'Click', '搶先了解(主視覺)');">
+                    <img class="first-icon" src="img/master_vision/first-icon.gif" onclick="ga('send', 'event', '首頁', 'Click', '搶先了解(主視覺)');">
                     <div class="mine-video" vid="Rydvsk7DQ-I" onclick="ga('send', 'event', '首頁', 'Click', '影片撥放');"></div>
                 </div>
                 <div class="layer" data-id="2">
@@ -285,7 +287,7 @@ function check_user_agent ( $type = NULL ) {
                     <img class="col-1 bubble-02-bg" src="img/master_vision_mobile/bubble-02-bg.png">
                     <div class="layer">
                         <img class="bubble-02" src="img/master_vision_mobile/bubble-02.png" onclick="ga('send', 'event', '首頁', 'Click', '第二彈(主視覺-mobile)');">
-                        <img class="first-icon" src="img/master_vision_mobile/first-icon.png" onclick="ga('send', 'event', '首頁', 'Click', '搶先了解(主視覺-mobile)');">
+                        <img class="first-icon" src="img/master_vision_mobile/first-icon.gif" onclick="ga('send', 'event', '首頁', 'Click', '搶先了解(主視覺-mobile)');">
                     </div>
                 </div>
                 <div class="row">
@@ -294,120 +296,145 @@ function check_user_agent ( $type = NULL ) {
             </div>
             <!-- 主視覺 mobile end -->
             <img class="main-down marginTop" src="img/main/main_down.png">
+
             <?php
                 if(!$ismobile) { 
             ?>
-            <!-- 及時戰況 desktop start -->
-            <div id="battlefield" class="main-bg">
-                <div class="row battlefield-bg">
+            <!-- 四區冠軍 desktop start -->
+            <div id="battle-final" class="main-bg">
+                <div class="row battle-final-bg">
                     <div class="flower_area" style="position: absolute;top: 0;left: 0;width: 100%;height: 90%;">
                         <canvas id="flower-canvas" class="flower-canvas"></canvas>
                     </div>
-                    <img class="col-1" src="img/battlefield/winner_bg_1.png">
-                    <div class="layer" data-id="1">
-                        <img class="battlefield-title" src="img/battlefield/winner-title.png">
-                        <div class="marquee-frame">
-                            <div class="marquee">
-                                <!-- 跑馬燈測試 -->
-                                <marquee DIRECTION="left" BEHAVIOR="scroll"></marquee>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="layer" data-id="2">
-                        <div class="white-board num-1" onclick="ga('send', 'event', '首頁', 'Click', '第一名');">
-                            <div class="board-content">
-                                <p class="school-name">麥香高中</p>
-                                <p class="scores">- 積分</p>
-                            </div>
-                        </div>
-                        <div class="white-board num-2" onclick="ga('send', 'event', '首頁', 'Click', '第二名');">
-                            <div class="board-content">
-                                <p class="school-name">麥麥高中</p>
-                                <p class="scores">- 積分</p>
-                            </div>
-                        </div>
-                        <div class="white-board num-3" onclick="ga('send', 'event', '首頁', 'Click', '第三名');">
-                            <div class="board-content">
-                                <p class="school-name">麥力高中</p>
-                                <p class="scores">- 積分</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="battlefield-select-area">
-                    <div class="battlefield-select-inline">
-                        <img class="battlefield-select" data-id="1" src="img/battlefield/section_1_on.png">
-                        <img class="battlefield-select" data-id="2" src="img/battlefield/section_2_off.png">
-                        <img class="battlefield-select" data-id="3" src="img/battlefield/section_3_off.png">
-                        <img class="battlefield-select" data-id="4" src="img/battlefield/section_4_off.png">
-                    </div>
-                    <div class="battlefield-select-opacity"></div>
+                    <img class="col-1" src="img/battlefield/final.png">
                 </div>
             </div>
-            <!-- 及時戰況 desktop end -->
+            <!-- 四區冠軍 desktop end -->
             <?php
                 } 
             ?>
-            <!-- 及時戰況 mobile start -->
-            <div id="battlefield-mobile" class="main-bg">
-                <div class="row battlefield-bg">
-                    <img class="col-1" src="img/battlefield_mobile/winner_bg.png">
-                    <div class="battlefield-cover">
-                        <img class="title" src="img/battlefield_mobile/winner-title.png">
-                        <div class="marquee-frame">
-                            <div class="marquee">
-                                <!-- 跑馬燈測試 -->
-                                <marquee DIRECTION="left" BEHAVIOR="scroll"></marquee>
-                            </div>
-                        </div>
-                        <img class="section-text" src="img/battlefield_mobile/school_1.png">
-                        <div class="top-3-group">
-                            <div class="top-3" data-id="1">
-                                <img class="winner-icon" src="img/battlefield_mobile/school_winner_1_1.png">
-                                <div class="winner-content-area" onclick="ga('send', 'event', '首頁', 'Click', '第一名(mobile)');">
-                                    <div class="winner-content">
-                                        <div class="winner-content-border">
-                                            <p class="school-name">麥香高中</p>
-                                            <p class="scores">- 積分</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="top-3" data-id="2">
-                                <img class="winner-icon" src="img/battlefield_mobile/school_winner_1_1.png">
-                                <div class="winner-content-area" onclick="ga('send', 'event', '首頁', 'Click', '第二名(mobile)');">
-                                    <div class="winner-content">
-                                        <div class="winner-content-border">
-                                            <p class="school-name">麥麥高中</p>
-                                            <p class="scores">- 積分</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="top-3" data-id="3">
-                                <img class="winner-icon" src="img/battlefield_mobile/school_winner_1_1.png">
-                                <div class="winner-content-area" onclick="ga('send', 'event', '首頁', 'Click', '第三名(mobile)');">
-                                    <div class="winner-content">
-                                        <div class="winner-content-border">
-                                            <p class="school-name">麥力高中</p>
-                                            <p class="scores">- 積分</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="battlefield-select-area">
-                    <div class="battlefield-select-inline">
-                        <img class="battlefield-select" data-id="1" src="img/battlefield/section_1_on.png" onclick="ga('send', 'event', '首頁', 'Click', '第一區學校(即時戰況)');">
-                        <img class="battlefield-select" data-id="2" src="img/battlefield/section_2_off.png" onclick="ga('send', 'event', '首頁', 'Click', '第二區學校(即時戰況)');">
-                        <img class="battlefield-select" data-id="3" src="img/battlefield/section_3_off.png" onclick="ga('send', 'event', '首頁', 'Click', '第三區學校(即時戰況)');">
-                        <img class="battlefield-select" data-id="4" src="img/battlefield/section_4_off.png" onclick="ga('send', 'event', '首頁', 'Click', '第四區學校(即時戰況)');">
-                    </div>
+            <!-- 四區冠軍 mobile start -->
+            <div id="battle-final-mobile" class="main-bg">
+                <div class="row battle-final-bg">
+                    <img class="col-1" src="img/battlefield_mobile/final.png">
                 </div>
             </div>
-            <!-- 及時戰況 mobile end -->
+            <!-- 四區冠軍 mobile end -->
+
+            <div class="show-battlefield" style="display: none;">
+                <div class="main-v-space"></div>
+                <?php
+                    if(!$ismobile) { 
+                ?>
+                <!-- 及時戰況 desktop start -->
+                <div id="battlefield" class="main-bg">
+                    <div class="row battlefield-bg">
+                        <img class="col-1" src="img/battlefield/winner_bg_1.png">
+                        <div class="layer" data-id="1">
+                            <img class="battlefield-title" src="img/battlefield/winner-title.png">
+                            <div class="marquee-frame">
+                                <div class="marquee">
+                                    <!-- 跑馬燈測試 -->
+                                    <marquee DIRECTION="left" BEHAVIOR="scroll"></marquee>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layer" data-id="2">
+                            <div class="white-board num-1" onclick="ga('send', 'event', '首頁', 'Click', '第一名');">
+                                <div class="board-content">
+                                    <p class="school-name">麥香高中</p>
+                                    <p class="scores">- 積分</p>
+                                </div>
+                            </div>
+                            <div class="white-board num-2" onclick="ga('send', 'event', '首頁', 'Click', '第二名');">
+                                <div class="board-content">
+                                    <p class="school-name">麥麥高中</p>
+                                    <p class="scores">- 積分</p>
+                                </div>
+                            </div>
+                            <div class="white-board num-3" onclick="ga('send', 'event', '首頁', 'Click', '第三名');">
+                                <div class="board-content">
+                                    <p class="school-name">麥力高中</p>
+                                    <p class="scores">- 積分</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="battlefield-select-area">
+                        <div class="battlefield-select-inline">
+                            <img class="battlefield-select" data-id="1" src="img/battlefield/section_1_on.png">
+                            <img class="battlefield-select" data-id="2" src="img/battlefield/section_2_off.png">
+                            <img class="battlefield-select" data-id="3" src="img/battlefield/section_3_off.png">
+                            <img class="battlefield-select" data-id="4" src="img/battlefield/section_4_off.png">
+                        </div>
+                        <div class="battlefield-select-opacity"></div>
+                    </div>
+                </div>
+                <!-- 及時戰況 desktop end -->
+                <?php
+                    } 
+                ?>
+                <!-- 及時戰況 mobile start -->
+                <div id="battlefield-mobile" class="main-bg">
+                    <div class="row battlefield-bg">
+                        <img class="col-1" src="img/battlefield_mobile/winner_bg.png">
+                        <div class="battlefield-cover">
+                            <img class="title" src="img/battlefield_mobile/winner-title.png">
+                            <div class="marquee-frame">
+                                <div class="marquee">
+                                    <!-- 跑馬燈測試 -->
+                                    <marquee DIRECTION="left" BEHAVIOR="scroll"></marquee>
+                                </div>
+                            </div>
+                            <img class="section-text" src="img/battlefield_mobile/school_1.png">
+                            <div class="top-3-group">
+                                <div class="top-3" data-id="1">
+                                    <img class="winner-icon" src="img/battlefield_mobile/school_winner_1_1.png">
+                                    <div class="winner-content-area" onclick="ga('send', 'event', '首頁', 'Click', '第一名(mobile)');">
+                                        <div class="winner-content">
+                                            <div class="winner-content-border">
+                                                <p class="school-name">麥香高中</p>
+                                                <p class="scores">- 積分</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="top-3" data-id="2">
+                                    <img class="winner-icon" src="img/battlefield_mobile/school_winner_1_1.png">
+                                    <div class="winner-content-area" onclick="ga('send', 'event', '首頁', 'Click', '第二名(mobile)');">
+                                        <div class="winner-content">
+                                            <div class="winner-content-border">
+                                                <p class="school-name">麥麥高中</p>
+                                                <p class="scores">- 積分</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="top-3" data-id="3">
+                                    <img class="winner-icon" src="img/battlefield_mobile/school_winner_1_1.png">
+                                    <div class="winner-content-area" onclick="ga('send', 'event', '首頁', 'Click', '第三名(mobile)');">
+                                        <div class="winner-content">
+                                            <div class="winner-content-border">
+                                                <p class="school-name">麥力高中</p>
+                                                <p class="scores">- 積分</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="battlefield-select-area">
+                        <div class="battlefield-select-inline">
+                            <img class="battlefield-select" data-id="1" src="img/battlefield/section_1_on.png" onclick="ga('send', 'event', '首頁', 'Click', '第一區學校(即時戰況)');">
+                            <img class="battlefield-select" data-id="2" src="img/battlefield/section_2_off.png" onclick="ga('send', 'event', '首頁', 'Click', '第二區學校(即時戰況)');">
+                            <img class="battlefield-select" data-id="3" src="img/battlefield/section_3_off.png" onclick="ga('send', 'event', '首頁', 'Click', '第三區學校(即時戰況)');">
+                            <img class="battlefield-select" data-id="4" src="img/battlefield/section_4_off.png" onclick="ga('send', 'event', '首頁', 'Click', '第四區學校(即時戰況)');">
+                        </div>
+                    </div>
+                </div>
+                <!-- 及時戰況 mobile end -->
+            </div>
             <p class="main-down-text">高校生戰起來！最後誰有資格搶下限量席位，你「玩」了算！</p>
             <img class="main-down go-icon" src="img/master_vision/go-white.png" onclick="ga('send', 'event', '首頁', 'Click', '校際卡位馬上GO');">
             <!-- 卡位三步驟 desktop start -->
@@ -611,6 +638,27 @@ function check_user_agent ( $type = NULL ) {
         </div>
     </footer>
     <script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+
+    <?php
+        // October 18th, 2016 12:00 AM
+        if(time() > 1476720000) { 
+    ?>
+    <link href="css/sweetalert.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/libs/sweetalert.min.js"></script>
+
+    <script type="text/javascript">
+        var is_expired = 1;
+    </script>
+    <?php
+        } else {
+    ?>
+    <script type="text/javascript">
+        var is_expired = 0;
+    </script>
+    <?php
+        } 
+    ?>
+
     <script type="text/javascript" src="js/main.js"></script>
     <!-- 包含了所有學校的請求 -->
     <script type="text/javascript" src="js/school_menu.js"></script>

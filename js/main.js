@@ -91,7 +91,7 @@ $(window).resize(function() {
 
     if ($('#orientation').length > 0) {
         if ($(window).width() > $(window).height()) {
-            
+
             if ($(window).width() != screen_w) {
                 $('#orientation').css('display', 'block');
             }
@@ -130,6 +130,24 @@ $(document).ready(function() {
                     $('.fbshare-area').addClass('profile-area');
                     $('.profile-area').removeClass('fbshare-area');
                     $('.profile-area').unbind('click');
+
+                    if ($('.profile-pic').length > 0) {
+
+                        demo_click = 0;
+
+                        $('body').on('click', '.profile-pic', function() {
+                            demo_click++;
+                            if (demo_click == 3) {
+                                
+                                $('.show-battlefield').css('display', 'block');
+
+                                $('.play-done').addClass('play');
+                                $('.play-done').attr('src', 'img/section_btn/play.png');
+                                $('.play').removeClass('play-done');
+                            }
+                        });
+                    }
+
                 });
             }
         });

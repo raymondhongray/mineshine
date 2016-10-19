@@ -93,40 +93,51 @@ function share_fb(fb_id) {
 
 // 遊戲分享
 function call_share_game(fb_id) {
-    $.ajax({
-        type: 'POST',
-        url: '../program/api/share_game.php',
-        data: {
-            fbid: fb_id,
-        },
-        dataType: "json",
-        success: function(res) {
-            console.log('share_game', res);
 
-            if (res['code'] == 0 || res['code'] == 99) {
+    if (is_expired == 1) {
 
-                var prize = res['award'];
+        var redirect_uri = window.location.protocol + '//';
+        redirect_uri += window.location.hostname;
+        redirect_uri += window.location.pathname;
+        redirect_uri += '?play_done=1&prize=0';
+        window.location.href = redirect_uri;
 
-                var redirect_uri = window.location.protocol + '//';
-                redirect_uri += window.location.hostname;
-                redirect_uri += window.location.pathname;
-                redirect_uri += '?play_done=1&prize=' + prize;
-                window.location.href = redirect_uri;
-            } else {
-                if (res['code'] == 1) {
-                    alert('share_game, 錯誤回報\nFB ID 錯誤');
-                } 
+    } else {
+        $.ajax({
+            type: 'POST',
+            url: '../program/api/share_game.php',
+            data: {
+                fbid: fb_id,
+            },
+            dataType: "json",
+            success: function(res) {
+                console.log('share_game', res);
 
-                if (res['code'] == 2) {
-                    alert('share_game, 錯誤回報\n分享超出今日遊戲次數');
+                if (res['code'] == 0 || res['code'] == 99) {
+
+                    var prize = res['award'];
+
+                    var redirect_uri = window.location.protocol + '//';
+                    redirect_uri += window.location.hostname;
+                    redirect_uri += window.location.pathname;
+                    redirect_uri += '?play_done=1&prize=' + prize;
+                    window.location.href = redirect_uri;
+                } else {
+                    if (res['code'] == 1) {
+                        alert('share_game, 錯誤回報\nFB ID 錯誤');
+                    }
+
+                    if (res['code'] == 2) {
+                        alert('share_game, 錯誤回報\n分享超出今日遊戲次數');
+                    }
                 }
-            }
-        },
-        error: function(XMLHttpRequest, textStatus, errorThrown) {
-            console.log("Status: " + textStatus);
-            console.log("Error: " + errorThrown);
-        },
-    });
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                console.log("Status: " + textStatus);
+                console.log("Error: " + errorThrown);
+            },
+        });
+    }
 }
 
 // 顯示抽獎畫面
@@ -165,6 +176,14 @@ function show_award(check_award) {
         };
         swap_bg_img(target_obj, src_prefix, 150, 3, false);
 
+        if (is_expired == 1) {
+            swal({
+                title: '大會報告',
+                text: '「麥香超友力擂台賽」校際卡位戰活動已截止。',
+                type: 'warning',
+                confirmButtonText: 'OK'
+            });
+        }
     }, 500);
 
     $('.play-info.game-cover').css('display', 'none');
@@ -200,30 +219,42 @@ function get_school_name(sid) {
 // 上線用
 function add_scores(fb_id, sid, scores) {
 
-    $.ajax({
-        type: 'POST',
-        url: '../program/api/add_score.php',
-        data: {
-            fbid: fb_id,
-            sid: sid,
-            scores: scores
-        },
-        dataType: "json",
-        success: function(res) {
-            console.log('add_score', res);
+    if (is_expired == 1) {
+        swal({
+            title: '大會報告',
+            text: '「麥香超友力擂台賽」校際卡位戰積分已停止統計。',
+            type: 'warning',
+            confirmButtonText: 'OK'
+        });
+        game_done(game_school_name, scores);
 
-            if (res['code'] == 0 || res['code'] == 99) {
+    } else {
 
-                game_done(game_school_name, scores);
-            } else {
-                alert('add_score, 錯誤回報');
-            }
-        },
-        error: function(XMLHttpRequest, textStatus, errorThrown) {
-            console.log("Status: " + textStatus);
-            console.log("Error: " + errorThrown);
-        },
-    });
+        $.ajax({
+            type: 'POST',
+            url: '../program/api/add_score.php',
+            data: {
+                fbid: fb_id,
+                sid: sid,
+                scores: scores
+            },
+            dataType: "json",
+            success: function(res) {
+                console.log('add_score', res);
+
+                if (res['code'] == 0 || res['code'] == 99) {
+
+                    game_done(game_school_name, scores);
+                } else {
+                    alert('add_score, 錯誤回報');
+                }
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                console.log("Status: " + textStatus);
+                console.log("Error: " + errorThrown);
+            },
+        });
+    }
 }
 
 function first_gift() {
@@ -369,6 +400,15 @@ function game_init() {
 
                     setTimeout(function() {
                         stop_loading($('#pre-load'));
+
+                        if (is_expired == 1) {
+                            swal({
+                                title: '大會報告',
+                                text: '「麥香超友力擂台賽」校際卡位戰積分已停止統計。',
+                                type: 'warning',
+                                confirmButtonText: 'OK'
+                            });
+                        }
                     }, 1000);
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {

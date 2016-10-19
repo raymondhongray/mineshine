@@ -216,15 +216,16 @@ function animation_group() {
             name: 'img/master_vision/bg_',
             format: 'png'
         };
-
-        swap_bg_img($('#maste-vision-img'), src_prefix, 800, 2, true);
+        // 背景切換
+        // swap_bg_img($('#maste-vision-img'), src_prefix, 800, 2, true);
     } else {
 
         var src_prefix = {
             name: 'img/master_vision_mobile/bg_',
             format: 'png'
         };
-        swap_bg_img($('#maste-vision-m-img'), src_prefix, 800, 2, true);
+        // 背景切換
+        // swap_bg_img($('#maste-vision-m-img'), src_prefix, 800, 2, true);
     }
 }
 
@@ -236,6 +237,25 @@ $(window).load(function() {
             stop_loading($('#pre-load'));
 
             animation_group();
+
+            if (is_expired == 1) {
+
+                setTimeout(function() {
+                    swal({
+                        title: '大會報告',
+                        text: '「麥香超友力擂台賽」\n各區冠軍已出爐！\n校際卡位戰積分已停止統計。',
+                        type: 'warning',
+                        confirmButtonText: 'OK'
+                    }, function() {
+
+                        if ($('#battle-final-mobile').css('display') == 'none') {
+                            move_to($('#battle-final'), -($('header').height() + 10));
+                        } else {
+                            move_to($('#battle-final-mobile'), -($('header').height() + 10));
+                        }
+                    });
+                }, 3000);
+            }
 
             clearInterval(refreshIntervalId);
         }
@@ -321,7 +341,7 @@ $(document).ready(function() {
     var shareindexInterval = setInterval(function() {
         if (window.fbApiInit) {
 
-            $('.fb-share-index, .popup-video-share').click(function() {
+            $('.popup-video-share, .fb-share-index').click(function() {
                 share_fb_index();
                 $('#fb-share-btn').click();
             });

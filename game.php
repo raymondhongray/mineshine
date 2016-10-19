@@ -337,6 +337,27 @@ function check_user_agent ( $type = NULL ) {
         </div>
     </div>
     <script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+
+    <?php
+        // October 18th, 2016 12:00 AM
+        if(time() > 1476720000) { 
+    ?>
+    <link href="css/sweetalert.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/libs/sweetalert.min.js"></script>
+
+    <script type="text/javascript">
+        var is_expired = 1;
+    </script>
+    <?php
+        } else {
+    ?>
+    <script type="text/javascript">
+        var is_expired = 0;
+    </script>
+    <?php
+        } 
+    ?>
+
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/game.js"></script>
 </body>
